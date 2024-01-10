@@ -1,5 +1,9 @@
 doctrine:
     dbal:
+        driver: 'pdo_pgsql'
+        server_version: '15'
+        charset: utf8
+        default_table_options:
         url: '%env(resolve:DATABASE_URL)%'
 
         # IMPORTANT: You MUST configure your server version,
