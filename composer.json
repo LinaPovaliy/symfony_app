@@ -25,6 +25,7 @@
         "symfony/uid": "^6.4",
         "symfony/validator": "^6.4",
         "symfony/yaml": "^6.4",
+        "twig/intl-extra": "^3",
         "webmozart/assert": "^1.11"
     },
     "config": {
