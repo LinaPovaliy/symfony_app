@@ -1,33 +1,37 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
-{% block title %}Conference Guestbook - {{ conference }}{% endblock %}
+{#{% block title %}Conference Guestbook - {{ conference }}{% endblock %}#}
 
-{% block body %}
-    <h2>{{ conference }} Conference</h2>
+{#{% block body %}#}
+{#    <h2>{{ conference }} Conference</h2>#}
 
-    {% if comments|length > 0 %}
-        <div>There are {{ comments|length }} comments.</div>
+{#    {% if comments|length > 0 %}#}
+{#        <div>There are {{ comments|length }} comments.</div>#}
 
-        {% for comment in comments %}
-            {% if comment.photofilename %}
-                <img src="{{ asset('uploads/photos/' ~ comment.photofilename) }}" style="max-width: 200px" />
-            {% endif %}
+{#        {% for comment in comments %}#}
+{#            {% if comment.photofilename %}#}
+{#                <img src="{{ asset('uploads/photos/' ~ comment.photofilename) }}" style="max-width: 200px" />#}
+{#            {% endif %}#}
 
-            <h4>{{ comment.author }}</h4>
-            <small>
-                {{ comment.createdAt|date('Y-m-d') }}
-            </small>
+{#            <h4>{{ comment.author }}</h4>#}
+{#            <small>#}
+{#                {{ comment.createdAt|date('Y-m-d') }}#}
+{#            </small>#}
 
-            <p>{{ comment.text }}</p>
-        {% endfor %}
+{#            <p>{{ comment.text }}</p>#}
+{#        {% endfor %}#}
 
-        {% if previous >= 0 %}
-            <a href="{{ path('conference', { slug: conference.slug, offset: previous }) }}">Previous</a>
-        {% endif %}
-        {% if next < comments|length %}
-            <a href="{{ path('conference', { slug: conference.slug, offset: next }) }}">Next</a>
-        {% endif %}
-    {% else %}
-        <div>No comments have been posted yet for this conference.</div>
-    {% endif %}
-{% endblock %}
+{#        {% if previous >= 0 %}#}
+{#            <a href="{{ path('conference', { slug: conference.slug, offset: previous }) }}">Previous</a>#}
+{#        {% endif %}#}
+{#        {% if next < comments|length %}#}
+{#            <a href="{{ path('conference', { slug: conference.slug, offset: next }) }}">Next</a>#}
+{#        {% endif %}#}
+{#    {% else %}#}
+{#        <div>No comments have been posted yet for this conference.</div>#}
+{#    {% endif %}#}
+
+{#    <h2>Add your own feedback</h2>#}
+
+{#    {{ form(comment_form) }}#}
+{#{% endblock %}#}
